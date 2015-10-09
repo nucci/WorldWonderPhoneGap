@@ -1,0 +1,48 @@
+div.item {
+    height: 60px;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+div.item:nth-child(odd) {
+    background-color: #fefefe;
+}
+
+div.item > .icon {
+    width: 21%;
+    max-width: 50px;
+    margin: 5px 5%;
+    height: 50px;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+}
+
+div.item > .content {
+    width: 70%;
+    height: 100%;
+}
+
+div.item > .content > span {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 1em;
+}
+
+div.item > .content > label {
+    width: 100%;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+div.loading {
+    height: 100%;
+}
+
+div.loading > label{
+    font-size: 2em;
+    font-weight: 600;
+
+}

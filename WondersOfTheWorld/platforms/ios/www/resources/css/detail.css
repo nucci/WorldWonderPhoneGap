@@ -1,0 +1,31 @@
+.banner {
+    width: 100%;
+    position: fixed;
+}
+
+.banner > img {
+    height: auto;
+    width: 100%;
+}
+
+.description {
+    position: relative;
+    background-color: white;
+    top: 220px;
+    box-shadow: 0 -5px 20px -10px black;
+    padding: 1em;
+}
+
+.description > h2 {
+    margin: 0;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #eee;
+}
+
+.description > h3 {
+
+}
+
+.description > p {
+    font-size: 1.2em;
+}

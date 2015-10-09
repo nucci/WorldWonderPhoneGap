@@ -1,0 +1,272 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    font-family:'Raleway', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    width:100%;
+    margin:0px;
+    padding:0px;
+}
+
+/* Portrait layout (default) */
+.bg {
+    position:absolute;             /* position in the center of the screen */
+    background-size: cover !important;
+    height: 100%;
+    width: 100%;
+}
+
+.ci {
+    background:url(../img/ci.jpg) no-repeat center center;
+}
+
+.co {
+    background:url(../img/co.jpg) no-repeat center center;
+}
+
+.cr {
+    background:url(../img/cr.jpg) no-repeat center center;
+}
+
+.gwc {
+    background:url(../img/gwc.jpg) no-repeat center center;
+}
+
+.mp {
+    background:url(../img/mp.jpg) no-repeat center center;
+}
+
+.pt {
+    background:url(../img/pt.jpg) no-repeat center center;
+}
+
+.tm {
+    background:url(../img/tm.jpg) no-repeat center center;
+}
+
+.container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+}
+
+.container.column,
+.flex.column {
+    flex-direction:column;
+}
+
+.container.row,
+.flex.row {
+    flex-direction:row;
+}
+
+.container.center,
+.flex.center {
+    justify-content:center;
+    align-items:center;
+    align-content:center;
+}
+
+.container.spaced,
+.flex.spaced {
+    justify-content:space-between;
+    align-content:center;
+}
+
+.container.justified,
+.flex.justified {
+    justify-content:space-around;
+    align-content:center;
+}
+
+.container.start,
+.flex.start {
+    justify-content:flex-start;
+    align-content:center;
+    align-items:stretch;
+}
+
+.container.bottom {
+    align-items:flex-end;
+}
+
+.logo {
+    text-align: center;
+    color: #eee;
+    text-shadow: 0px 0px 5px #000;
+    margin-top: 10em;
+}
+
+.logo h1 {
+    font-size: 2.8em;
+    font-weight: 600;
+    color: #eee;
+    margin: 0px 0px;
+}
+
+.logo h2 {
+    font-size: 1.6em;
+    font-weight: 300;
+    color: #FF4545;
+    margin: 0px 0px;
+}
+
+::-webkit-input-placeholder {
+   color: rgba(255,255,255,0.9);
+   font-weight: 300;
+}
+
+input {
+    border: none;
+    background: rgba(0,0,0,0);
+    border-radius: 0;
+    border-bottom: 1px solid #eee;
+    color: #eee;
+    font-size: 1.25em;
+    height: 1.25em;
+    text-shadow: 0px 0px 3px #000;
+    font-weight: 100;
+    width: 80%;
+    max-width: 200px;
+    margin: 10px 1px;
+    -webkit-appearance: none;
+    text-indent: 0;
+}
+
+.button {
+    background-color: #FF4545;
+    padding: 10px 30px;
+    color: #eee;
+    font-size: 1.4em;
+    min-width: 100px;
+    text-align: center;
+    margin: 50px 0px 20px 0px;
+    text-shadow: 0px 0px 3px #000;
+}
+
+.button.light {
+    background-color: #FF6A6A;
+}
+
+.button.cancel {
+    background-color: #888;
+    margin: 0px;
+}
+
+.form .button {
+    min-width: 140px;
+}
+
+.hidden {
+    display: none;
+}
+
+.translucent {
+    opacity: 0;
+}
+
+@keyframes slideIn {
+    from { opacity: 0.0; transform: translateY(30px)}
+    to { opacity: 1.0; transform: translateY(0px)}
+}
+ 
+@-webkit-keyframes slideIn {
+    from { opacity: 0.0; transform: translateY(30px)}
+    to { opacity: 1.0; transform: translateY(0px)}
+}
+ 
+@keyframes fadeOut {
+    from { opacity: 1.0;}
+    to { opacity: 0.0; display: hidden}
+}
+ 
+@-webkit-keyframes fadeOut {
+    from { opacity: 1.0;}
+    to { opacity: 0.0; display: hidden}
+}
+
+@keyframes fadeIn {
+    from { opacity: 0.0;}
+    to { opacity: 1.0;}
+}
+ 
+@-webkit-keyframes fadeIn {
+    from { opacity: 0.0;}
+    to { opacity: 1.0;}
+}
+
+.fadeOut {
+    animation:fadeOut 400ms;
+    -webkit-animation:fadeOut 400ms;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.fadeIn {
+    animation:fadeIn 400ms;
+    -webkit-animation:fadeIn 400ms;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.slideIn {
+    animation:slideIn 600ms;
+    -webkit-animation:slideIn 600ms;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.slideIn.a100 {
+    animation-delay: 100ms;
+    -webkit-animation-delay: 100ms;
+}
+
+.slideIn.a200 {
+    animation-delay: 200ms;
+    -webkit-animation-delay: 200ms;
+}
+
+.slideIn.a300 {
+    animation-delay: 300ms;
+    -webkit-animation-delay: 300ms;
+}
+
+.slideIn.a400 {
+    animation-delay: 400ms;
+    -webkit-animation-delay: 400ms;
+}
+
+.slideIn.a500 {
+    animation-delay: 500ms;
+    -webkit-animation-delay: 500ms;
+}
